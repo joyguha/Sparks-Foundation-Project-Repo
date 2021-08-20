@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <title>JoyGuha Payment Demo</title>
+</head>
+<style>
+    #cointainer {
+        content: "";
+        position: absolute;
+        background: url('https://images.unsplash.com/photo-1612401104473-a79cb1da9351?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80') no-repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.87;
+
+    }
+
+    
+    .heading1{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        color: white;
+        font-size: 1.8rem;
+        font-family: 'Rampart One', cursive;
+        text-shadow:4px 3px 2px black;
+
+
+    }
+    .quote{
+        font-family: 'Dancing Script', cursive;
+        text-shadow:4px 3px 2px black;
+        
+        
+    }
+    .para{
+        display: flex;
+        position: relative;
+        color: white;
+        margin: 0px 110px;
+        padding: 20px 20px;
+        font-family: 'Baloo 2', cursive;
+        font-size: 1.4rem;
+        text-shadow:3px 2px 1px black;
+        text-align-last: center;
+        
+    }
+    .stripe-button{
+        display: flex;
+        margin: auto;
+        background-color: black;
+        padding: auto;
+    }
+</style>
+
+<body>
+    <div id="cointainer">
+       
+
+
+        <div class="heading1">
+            <h1>Help Us To Save the Life!</h1>
+            <h3>Covid-19 Relief Fund</h3>
+            <h3 class="quote">" Difficult Roads Often Lead To Beautiful Destinations " <hr> </h3>
+        </div>
+
+        <div class="para">
+            
+            <p>Help us fund life-saving supplies for those suffering from COVID-19. Essential equipment like oxygen
+                concentrators, RT-PCR testing machines, PPE kits and oxygen generation plants. Your fund supply essential
+                life-saving equipment like oxygen concentrators, RT-PCR testing machines and PPE kits wherever the needs are
+                the greatest. <br>Fund Created By- Joy Guha </p>
+        </div>
+
+    </div>
+            <form action="payment" method="POST">
+        
+    
+
+    <script
+        src="//checkout.stripe.com/v2/checkout.js"
+        class="stripe-button"
+        data-key="<%= key %>" 
+        data-amount="10000" 
+        data-currency="inr" 
+        data-name="Joy Guha" 
+        data-description="This Payment is Testing purpose " 
+        data-locale="auto" > 
+    </script>
+    </form> 
+    
+</body>
+
+</html>
